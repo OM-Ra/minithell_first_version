@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_to_str.c                                    :+:      :+:    :+:   */
+/*   ft_count_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdelphia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/23 12:01:02 by mdelphia          #+#    #+#             */
-/*   Updated: 2019/07/23 12:01:06 by mdelphia         ###   ########.fr       */
+/*   Created: 2019/05/21 14:28:54 by mdelphia          #+#    #+#             */
+/*   Updated: 2019/05/21 14:28:56 by mdelphia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_int_to_str(int nbr)
+int		ft_count_char(char *line, char c)
 {
-	char			*str;
-	unsigned long	digit;
-	unsigned int	nb;
-	size_t			i;
+	int		num;
+	char	*str;
 
-	i = 0;
-	if (!(str = ft_strnew((size_t)(ft_lenint(nbr)))))
-		return (NULL);
-	if (nbr < 0)
+	num = 0;
+	str = line;
+	if (!line)
+		return (-1);
+	while (*str)
 	{
-		str[i++] = '-';
-		nb = -nbr;
+		if (*str == c)
+			num++;
+		str++;
 	}
-	else
-		nb = nbr;
-	digit = ft_digitint(nb);
-	while (digit)
-	{
-		str[i++] = nb / digit + '0';
-		nb %= digit;
-		digit /= 10;
-	}
-	str[i] = '\0';
-	return (str);
+	return (num);
 }

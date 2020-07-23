@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lenint.c                                        :+:      :+:    :+:   */
+/*   ft_find.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdelphia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/23 11:54:52 by mdelphia          #+#    #+#             */
-/*   Updated: 2019/04/23 11:54:56 by mdelphia         ###   ########.fr       */
+/*   Created: 2019/04/12 11:39:36 by mdelphia          #+#    #+#             */
+/*   Updated: 2019/04/12 11:39:39 by mdelphia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_lenint(unsigned int nbr)
+size_t		ft_find(char *line, char sym)
 {
-	unsigned int		i;
-	unsigned long		digit;
+	size_t i;
 
 	i = 0;
-	digit = 1;
-	if (nbr == 0)
-		return (1);
-	while ((nbr / digit))
-	{
-		digit *= 10;
-		i++;
-	}
-	return (i);
+	if (line)
+		while (line[i])
+		{
+			if (line[i] == sym)
+				return (i);
+			++i;
+		}
+	return (-1);
 }

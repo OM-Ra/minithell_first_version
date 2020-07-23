@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lenint.c                                        :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdelphia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/23 11:54:52 by mdelphia          #+#    #+#             */
-/*   Updated: 2019/04/23 11:54:56 by mdelphia         ###   ########.fr       */
+/*   Created: 2019/04/14 11:01:50 by mdelphia          #+#    #+#             */
+/*   Updated: 2019/04/14 11:01:52 by mdelphia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_lenint(unsigned int nbr)
+long long	ft_min(long long nbr1, long long nbr2)
 {
-	unsigned int		i;
-	unsigned long		digit;
-
-	i = 0;
-	digit = 1;
-	if (nbr == 0)
-		return (1);
-	while ((nbr / digit))
-	{
-		digit *= 10;
-		i++;
-	}
-	return (i);
+	return ((nbr1 < nbr2) ? nbr1 : nbr2);
 }

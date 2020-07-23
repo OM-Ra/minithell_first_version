@@ -91,7 +91,7 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		if (!(str[k] = ft_writeword(s, c, &i)))
 		{
-			ft_freesplit(str, k);
+			ft_freesplit(str);
 			return (NULL);
 		}
 		k++;

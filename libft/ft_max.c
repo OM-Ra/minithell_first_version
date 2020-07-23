@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_numchar.c                                       :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdelphia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 14:28:54 by mdelphia          #+#    #+#             */
-/*   Updated: 2019/05/21 14:28:56 by mdelphia         ###   ########.fr       */
+/*   Created: 2019/04/14 11:01:50 by mdelphia          #+#    #+#             */
+/*   Updated: 2019/04/14 11:01:52 by mdelphia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_numchar(char *line, char c)
+long long	ft_max(long long nbr1, long long nbr2)
 {
-	int		num;
-	char	*str;
-
-	num = 0;
-	str = line;
-	if (!line)
-		return (-1);
-	while (*str)
-	{
-		if (*str == c)
-			num++;
-		str++;
-	}
-	return (num);
+	return ((nbr1 > nbr2) ? nbr1 : nbr2);
 }

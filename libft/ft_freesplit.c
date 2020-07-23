@@ -12,13 +12,19 @@
 
 #include "libft.h"
 
-void	ft_freesplit(char **str, size_t k)
+void	ft_freesplit(char **str)
 {
-	while (--k)
+	char **start;
+
+	if (str)
 	{
-		free(str[k]);
-		str[k] = NULL;
+		start = str;
+		while (*str)
+		{
+			ft_memdel((void **)str);
+			++str;
+		}
+		free(start);
+		start = NULL;
 	}
-	free(str[0]);
-	str[0] = NULL;
 }

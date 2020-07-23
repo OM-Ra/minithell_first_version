@@ -97,7 +97,7 @@ static int	check_and_find_args(char **args)
 int			cd_function(char **args)
 {
 	char		*new_pos;
-	size_t		num_args;
+	int			num_args;
 	char		*buf;
 
 	if ((num_args = check_and_find_args(args)) == -1)

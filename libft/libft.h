@@ -82,10 +82,14 @@ void				ft_lstdel(t_list **alst, void (*del) (void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f) (t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem));
+
+/*
+** BONUS
+*/
 unsigned int		ft_lenint(unsigned int	nbr);
 unsigned long int	ft_digitint(unsigned int n);
 t_list				*ft_lstadd_end(t_list **alst, t_list *new);
-void				ft_freesplit(char **str, size_t k);
+void				ft_freesplit(char **str);
 void				ft_del(void *content, size_t content_size);
 size_t				ft_space_start(char const *s);
 size_t				ft_space_end(char const *s);
@@ -97,14 +101,18 @@ int					ft_llintlimit(long double res);
 long long int		ft_pow(int b, int p);
 int					ft_powint(int b, int p);
 int					ft_puterror(int fd, char *str, int er);
-int					ft_numchar(char *line, char c);
+int					ft_count_char(char *line, char c);
 char				*ft_str_puterror(int fd, char *str);
 int					ft_faktorial(int f);
 char				*ft_str3str(char *str1, char *str2, char *str3);
 char				*ft_strmas(char **mas);
-char				*ft_int_to_str(int nbr);
 void				ft_put_lli_nbr(long long int nbr);
 void				ft_putspase(int len);
 void				ft_move_str_index(char *str, size_t *i);
+long long			ft_abs(long long nbr);
+long long			ft_min(long long nbr1, long long nbr2);
+long long			ft_max(long long nbr1, long long nbr2);
+size_t				ft_find(char *line, char sym);
+size_t				ft_rfind(char *line, char sym);
 
 #endif

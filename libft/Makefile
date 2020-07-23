@@ -26,9 +26,10 @@ FILE_C = 	ft_atoi.c ft_bzero.c ft_del.c ft_digitint.c \
 			ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c \
 			ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c \
 			ft_toupper.c ft_bintodec.c ft_dectobin.c ft_intlimit.c ft_llintlimit.c \
-			ft_pow.c ft_powint.c ft_numchar.c ft_puterror.c ft_str_puterror.c \
-			ft_faktorial.c ft_str3str.c ft_strmas.c ft_int_to_str.c ft_put_lli_nbr.c \
-			ft_putspase.c ft_move_str_index.c
+			ft_pow.c ft_powint.c ft_count_char.c ft_puterror.c ft_str_puterror.c \
+			ft_faktorial.c ft_str3str.c ft_strmas.c ft_put_lli_nbr.c \
+			ft_putspase.c ft_move_str_index.c ft_abs.c ft_min.c ft_max.c ft_find.c \
+			ft_rfind.c
 
 FILE_O = $(FILE_C:.c=.o)
 
